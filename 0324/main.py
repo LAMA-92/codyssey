@@ -39,9 +39,9 @@ def inventory_danger(file_path):
                 csv_output.write(f'{item[0]},{item[1]}\n')
 
         # [보너스 1] 이진 파일(.bin)로 저장
-        with open('Mars_Base_Inventory_List.bin', 'wb') as binary_file:          # 파일을 이진 파일 형태로 생성
+        with open('Mars_Base_Inventory_List.bin', 'wb') as binary_file:         # 파일을 이진 파일 형태로 생성
             for item in inven_list:
-                data_line = f'{item[0]}:{item[1]}\n'.encode('utf-8')    # 데이터를 '이름:지수\n' 형태의 바이트로 변환
+                data_line = f'{item[0]}:{item[1]}\n'.encode('utf-8')            # 데이터를 '이름:지수\n' 형태의 바이트로 변환
                 binary_file.write(data_line)
         print('\n[정보] Mars_Base_Inventory_List.bin 저장 완료.')
 
@@ -49,7 +49,7 @@ def inventory_danger(file_path):
         print('\n--- [정보] 이진 파일 로드 결과 ---')
         with open('Mars_Base_Inventory_List.bin', 'rb') as binary_output:
             binary_data = binary_output.read()                                    
-            decoded_text = binary_data.decode('utf-8')                  # 바이트를 다시 문자열로 디코딩
+            decoded_text = binary_data.decode('utf-8')                          # 바이트를 다시 문자열로 디코딩
             print(decoded_text)
 
     except FileNotFoundError:
