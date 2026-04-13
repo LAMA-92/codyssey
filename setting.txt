@@ -1,0 +1,3 @@
+operating_system
+cpu_cores
+cpu_usage_percent
