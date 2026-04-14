@@ -11,6 +11,7 @@ try:
 except ImportError:
 # 설치 되어 있지 않을 때의 예외 처리
     psutil = None
+    print(f"시스템 정보를 가져오려면 'pip install psutil'을 통해 라이브러리를 설치해주세요.")
 
 # 3주차 - DummySensor 클래스 생성
 class DummySensor:      
