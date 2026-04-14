@@ -188,7 +188,7 @@ class MissionComputer:
                 'memory_size' : f'{round(psutil.virtual_memory().total / (1024**3), 2)} GB'
                 # psutil.cpu_count(logical=True) : 논리적 코어(쓰레드) 개수 까지 합친 CPU 코어 수
                 # psutil.virtual_memory().total : 전체 메모리 용량 (기본 단위 Byte) 
-                # 이를 GB 단위로 바꾸기 위해 1024의 3승으로 나눔            
+                # 이를 GB 단위로 바꿈            
             }
 
             # 설정에 맞춰 필터링
